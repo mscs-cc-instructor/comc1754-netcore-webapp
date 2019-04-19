@@ -19,6 +19,8 @@ namespace comc1754_netcore_webapp
 
         public static IWebHostBuilder CreateWebHostBuilder(string[] args) =>
             WebHost.CreateDefaultBuilder(args)
+                .UseKestrel()
+                .UseUrls("http://*:5000")
                 .UseStartup<Startup>();
     }
 }
